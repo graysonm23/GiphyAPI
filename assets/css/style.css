@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#gifs {
+  text-align: center;
+  float: left;
+  min-width: 80%;
+}
+
+#aside {
+  float: right;
+  min-width: 20%;
+}
