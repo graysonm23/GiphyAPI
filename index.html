@@ -27,20 +27,41 @@
     <title>Giphy API</title>
   </head>
   <body>
-    <header id="giphyHeader">
-      <h1>This is where buttons will go</h1>
-      <span id="giphyBut"></span>
-    </header>
-    <div id="gifs">Gifs will be printed here</div>
+    <div id="game-wrapper"></div>
+    <div id="giphyHeader">
+      <h1>Giphy API</h1>
+      <p>Your Favorite Buttons Are Down Below</p>
+      <div id="giphyBut" style="justify-content: space-around;"></div>
+    </div>
+    <div id="clearButtons">
+      <input
+        type="submit"
+        value="Clear Screen"
+        id="giphyClear"
+        class="giphyClear"
+      />
+      <input
+        type="submit"
+        value="Clear Favorites"
+        id="giphyClearFav"
+        class="giphyClearFav"
+      />
+    </div>
+    <div id="gifs"><span id="text">Gifs will be printed here</span></div>
     <aside id="aside">
-      <form>
-        <fieldset>
-          <input
-            type="text"
-            placeholder="Search Giphy..."
-            id="giphyInput"
-          /><input type="submit" value="Send Request" id="giphySend" />
-        </fieldset>
+      <form id="form">
+        <input type="search" placeholder="Search Giphy..." id="giphyInput" />
+        <input
+          type="search"
+          placeholder="How Many Would You Like..."
+          id="giphyInputHowMany"
+        />
+        <input
+          type="submit"
+          value="Get"
+          id="giphyHowMany"
+          class="giphyHowMany"
+        />
       </form>
     </aside>
     <script src="assets/javascript/app.js"></script>

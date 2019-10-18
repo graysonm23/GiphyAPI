@@ -3,17 +3,59 @@
   padding: 0;
 }
 
+#game-wrapper {
+  background: url(../images/background.jpg);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+form {
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  background-color: blanchedalmond;
+}
+
 h1 {
+  display: block;
+  min-width: 100%;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#clearButtons,
+#clearButtons button {
   text-align: center;
 }
 
 #gifs {
+  padding: 50px;
   text-align: center;
   float: left;
-  min-width: 80%;
+  min-width: 70%;
+  max-width: 70%;
 }
 
 #aside {
   float: right;
   min-width: 20%;
+  max-width: 20%;
+}
+
+.image {
+  padding: 20px;
 }
