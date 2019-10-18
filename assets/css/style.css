@@ -22,9 +22,14 @@ form {
   padding: 5px;
 }
 
+input {
+  color: blanchedalmond;
+}
+
 input:focus {
   outline: none;
   background-color: blanchedalmond;
+  color: black;
 }
 
 h1 {
@@ -33,8 +38,10 @@ h1 {
   text-align: center;
 }
 
-p {
-  text-align: center;
+#giphyDiv {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 #clearButtons,
@@ -58,4 +65,9 @@ p {
 
 .image {
   padding: 20px;
+}
+
+#text {
+  font-size: 36px;
+  mix-blend-mode: difference;
 }

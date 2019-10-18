@@ -46,23 +46,28 @@ $(form).on("submit", function() {
       for (var i = 0; i < json.data.length; i++) {
         results = json.data[i];
         console.log(results);
+        var giphyDiv = $("<div>");
         var giphyRating = $("<p>").text("Rating: " + results.rating);
+        console.log(results.rating);
         var giphyImage = $("<img>");
-        giphyImage.attr("src", results.images.fixed_height_small_still.url);
+        giphyImage.attr("src", results.images.fixed_height_small.url);
+        giphyImage.attr("data-animate", results.images.fixed_height_small.url);
         giphyImage.attr(
           "data-still",
           results.images.fixed_height_small_still.url
         );
-        giphyImage.attr("data-animate", results.images.fixed_height_small.url);
-        giphyImage.attr("data-state", "still");
+        giphyImage.attr("data-state", "animate");
         giphyImage.addClass("image");
-        $(giphyDiplay).append(giphyImage);
+        $(giphyDiv).attr("id", "giphyDiv");
+        $(giphyDiplay).append(giphyDiv);
+        $(giphyDiv).append(giphyImage);
+        $(giphyDiv).append(giphyRating);
       }
-      if (giphyInput === giphyBut) {
+      if ($(giphyBut).hasClass(giphyInput)) {
         return false;
       } else {
-        // giphyImage.append(giphyRating);
         $(giphyBut).append("<button>" + giphyInput + "</button>");
+        $(giphyBut).addClass(giphyInput);
       }
     })
 
