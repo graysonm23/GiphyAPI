@@ -5,6 +5,7 @@ let giphyDiplay = $("#gifs");
 let giphyClear = $("#giphyClear");
 let clearFav = $("#giphyClearFav");
 let form = $("#form");
+
 $(clearFav).on("click", function() {
   $(giphyBut).html("");
 });
@@ -21,7 +22,7 @@ $(form).on("submit", function() {
     .trim();
   event.preventDefault();
   if (isNaN(giphyInputHowMany)) {
-    alert("Input a number.");
+    $(modal).show();
     return false;
   }
   if (giphyInput == "") {
@@ -83,3 +84,23 @@ $(document).on("click", ".image", function() {
     $(this).attr("data-state", "still");
   }
 });
+
+// Get the modal
+var modal = $("#myModal");
+
+// Get the <span> element that closes the modal
+var span = $(".close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  $(modal).css("display", "none");
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    $(modal).css("display", "none");
+  }
+};
+
+$(modal).hide();
