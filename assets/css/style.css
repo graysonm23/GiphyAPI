@@ -106,6 +106,7 @@ h1 {
 .close {
   color: #aaa;
   float: right;
+  padding: 3px 10px;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
