@@ -84,7 +84,7 @@ $(document).on("click", ".image", function() {
     $(this).attr("data-state", "still");
   }
 });
-
+//-------------------------------------------------------MODAL-----------------------------------------------------------
 // Get the modal
 var modal = $("#myModal");
 
